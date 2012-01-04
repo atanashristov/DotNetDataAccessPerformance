@@ -30,17 +30,20 @@ namespace DotNetDataAccessPerformance.Tests
 
 		[Theory]
 		[InlineData(typeof(DataReaderNativeQueryRepository))]
-		[InlineData(typeof(DataReaderStoredProcedureRepository))]
-		[InlineData(typeof(DapperNativeQueryRepository))]
-		[InlineData(typeof(DapperStoredProcedureRepository))]
-		[InlineData(typeof(EntityFrameworkCompiledLinqQueryRepository))]
-		[InlineData(typeof(EntityFrameworkLinqToEntitiesRepository))]
-		[InlineData(typeof(EntityFrameworkNativeQueryRepository))]
-		[InlineData(typeof(EntityFrameworkStoredProcedureRepository))]
+		//////[InlineData(typeof(DataReaderStoredProcedureRepository))]
+		//[InlineData(typeof(DapperNativeQueryRepository))]
+		//////[InlineData(typeof(DapperStoredProcedureRepository))]
+		//[InlineData(typeof(EntityFrameworkCompiledLinqQueryRepository))]
+		//[InlineData(typeof(EntityFrameworkLinqToEntitiesRepository))]
+		//[InlineData(typeof(EntityFrameworkNativeQueryRepository))]
+		//////[InlineData(typeof(EntityFrameworkStoredProcedureRepository))]
 		[InlineData(typeof(NHibernateNativeQueryRepository))]
 		[InlineData(typeof(NHibernateHqlQueryRepository))]
 		[InlineData(typeof(NHibernateHqlQueryStrongTypeRepository))]
-		[InlineData(typeof(NHibernateStoredProcedureRepository))]
+		[InlineData(typeof(NHibernateHqlQueryRepository2))]
+        [InlineData(typeof(NHibernateHqlQueryStrongTypeRepository2))]
+		[InlineData(typeof(NHibernateCriteriaStrongTypeRepository2))]
+		//////[InlineData(typeof(NHibernateStoredProcedureRepository))]
 		public void QueryUsingJoinsTest(Type type)
 		{
 			var repository = RepositoryFactory.Create(type);
@@ -60,17 +63,20 @@ namespace DotNetDataAccessPerformance.Tests
 
 		[Theory]
 		[InlineData(typeof(DataReaderNativeQueryRepository))]
-		[InlineData(typeof(DataReaderStoredProcedureRepository))]
-		[InlineData(typeof(DapperNativeQueryRepository))]
-		[InlineData(typeof(DapperStoredProcedureRepository))]
-		[InlineData(typeof(EntityFrameworkCompiledLinqQueryRepository))]
-		[InlineData(typeof(EntityFrameworkLinqToEntitiesRepository))]
-		[InlineData(typeof(EntityFrameworkNativeQueryRepository))]
-		[InlineData(typeof(EntityFrameworkStoredProcedureRepository))]
+		//[InlineData(typeof(DataReaderStoredProcedureRepository))]
+		//[InlineData(typeof(DapperNativeQueryRepository))]
+		//[InlineData(typeof(DapperStoredProcedureRepository))]
+		//[InlineData(typeof(EntityFrameworkCompiledLinqQueryRepository))]
+		//[InlineData(typeof(EntityFrameworkLinqToEntitiesRepository))]
+		//[InlineData(typeof(EntityFrameworkNativeQueryRepository))]
+		//[InlineData(typeof(EntityFrameworkStoredProcedureRepository))]
 		[InlineData(typeof(NHibernateNativeQueryRepository))]
 		[InlineData(typeof(NHibernateHqlQueryRepository))]
 		[InlineData(typeof(NHibernateHqlQueryStrongTypeRepository))]
-		[InlineData(typeof(NHibernateStoredProcedureRepository))]
+		[InlineData(typeof(NHibernateHqlQueryRepository2))]
+        [InlineData(typeof(NHibernateHqlQueryStrongTypeRepository2))]
+		[InlineData(typeof(NHibernateCriteriaStrongTypeRepository2))]
+		//[InlineData(typeof(NHibernateStoredProcedureRepository))]
 		public void QueryByPrimaryKeyTest(Type type)
 		{
 			var repository = RepositoryFactory.Create(type);
@@ -100,6 +106,7 @@ namespace DotNetDataAccessPerformance.Tests
 		[InlineData(typeof(NHibernateNativeQueryRepository))]
 		[InlineData(typeof(NHibernateHqlQueryRepository))]
 		[InlineData(typeof(NHibernateHqlQueryStrongTypeRepository))]
+        [InlineData(typeof(NHibernateHqlQueryStrongTypeRepository2))]
 		[InlineData(typeof(NHibernateStoredProcedureRepository))]
 		public void AddUpdateDeleteTest(Type type)
 		{

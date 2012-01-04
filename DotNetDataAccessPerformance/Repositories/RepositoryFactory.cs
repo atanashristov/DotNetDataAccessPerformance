@@ -42,9 +42,21 @@ namespace DotNetDataAccessPerformance.Repositories
 			{
 				return new NHibernateHqlQueryStrongTypeRepository();
 			}
+			if (type == typeof(NHibernateHqlQueryStrongTypeRepository2)) //
+			{
+				return new NHibernateHqlQueryStrongTypeRepository2(); //
+			}
+			if (type == typeof(NHibernateCriteriaStrongTypeRepository2)) //
+			{
+				return new NHibernateCriteriaStrongTypeRepository2(); //
+			}
 			if (type == typeof(NHibernateHqlQueryRepository))
 			{
 				return new NHibernateHqlQueryRepository();
+			}
+			if (type == typeof(NHibernateHqlQueryRepository2)) //
+			{
+				return new NHibernateHqlQueryRepository2(); //
 			}
 			if (type == typeof(NHibernateNativeQueryRepository))
 			{

@@ -4,7 +4,7 @@ namespace DotNetDataAccessPerformance.Helpers
 {
 	public class ConnectionFactory
 	{
-		private const string ConnectionString = "data source=localhost;initial catalog=Chinook;integrated security=True;multipleactiveresultsets=True;";
+		private const string ConnectionString = "data source=.\\SQLEXPRESS;initial catalog=Chinook;integrated security=True;multipleactiveresultsets=True;";
 
 		public static SqlConnection OpenConnection(string connectionString)
 		{
